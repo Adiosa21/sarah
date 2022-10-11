@@ -9,16 +9,12 @@ class SignUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List images = [
-      "t2.jpg",
-      "f.jpg",
-      "g.jpg"
-    ];
+    List images = ["t2.jpg", "f.jpg", "g.jpg"];
     double w = MediaQuery.of(context).size.width;
     double h = MediaQuery.of(context).size.height;
     return Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
+        body: ListView(
           children: [
             Container(
                 margin: const EdgeInsets.only(top: 10),
@@ -96,7 +92,8 @@ class SignUpPage extends StatelessWidget {
                         child: TextField(
                           decoration: InputDecoration(
                               hintText: "Password",
-                              prefixIcon: Icon(Icons.password, color:Colors.deepOrangeAccent),
+                              prefixIcon: Icon(Icons.password,
+                                  color: Colors.deepOrangeAccent),
                               focusedBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.circular(30),
                                   borderSide: BorderSide(
@@ -144,17 +141,15 @@ class SignUpPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             RichText(
-              text:TextSpan(
-                recognizer: TapGestureRecognizer()..onTap=()=>Get.back(),
-                text: "Have an account?",
-                style: TextStyle(
-                  fontSize: 20,
-                  color:Colors.grey[500] 
-                )
-                ),
-              ),
+              text: TextSpan(
+                  recognizer: TapGestureRecognizer()..onTap = () => Get.back(),
+                  text: "Have an account?",
+                  style: TextStyle(fontSize: 20, color: Colors.grey[500])),
+            ),
             SizedBox(height: w * 0.08),
             RichText(
               text: TextSpan(
@@ -166,15 +161,17 @@ class SignUpPage extends StatelessWidget {
             Wrap(
               children: List<Widget>.generate(3, (index) {
                 return Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: CircleAvatar(
-                    radius: 30,
-                    backgroundColor: Colors.grey[500],
+                    padding: const EdgeInsets.all(10.0),
                     child: CircleAvatar(
-                      radius: 25,
-                      backgroundImage: AssetImage("img/"+ images[index],),
-                    )));
-            }),
+                        radius: 30,
+                        backgroundColor: Colors.grey[500],
+                        child: CircleAvatar(
+                          radius: 25,
+                          backgroundImage: AssetImage(
+                            "img/" + images[index],
+                          ),
+                        )));
+              }),
             )
           ],
         ));

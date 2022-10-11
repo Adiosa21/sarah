@@ -5,6 +5,7 @@ import 'login_page.dart';
 import 'signup_page.dart';
 import 'package:get/get.dart';
 import 'markets_page.dart';
+import 'products_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MarketsPage(),
+      home: const Productspage(),
     );
   }
 }
