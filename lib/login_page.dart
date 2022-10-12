@@ -146,6 +146,11 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(height: w * 0.08),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "/products");
+                },
+                child: Text("Go to next")),
             RichText(
               text: TextSpan(
                   text: "Don\'t have an account?",

@@ -22,7 +22,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Productspage(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const LoginPage(),
+        "/products": ((context) => const Productspage())
+      },
     );
   }
 }
