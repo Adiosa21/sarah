@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "550674958328",
+    "project_id": "fresh-food-online-market",
+    "storage_bucket": "fresh-food-online-market.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550674958328:android:c5dce9f1a5bc5f38a9f80d",
+        "android_client_info": {
+          "package_name": "com.example.fresh_foods"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "550674958328-2moojvsncs2tvkvgf0d1m5tua7cg0rml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTRo5pPqHtDEOlTkrnG-2cQ-BT57FaeZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "550674958328-2moojvsncs2tvkvgf0d1m5tua7cg0rml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
