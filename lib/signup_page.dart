@@ -2,11 +2,21 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:fresh_foods/services/fire_auth.dart';
 import 'package:get/get.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class SignUpPage extends StatelessWidget {
+class SignUpPage extends StatefulWidget {
   const SignUpPage({super.key});
 
+  @override
+  State<SignUpPage> createState() => _SignUpPageState();
+}
+
+class _SignUpPageState extends State<SignUpPage> {
+  final _emailController = TextEditingController();
+  final _passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     List images = ["t2.jpg", "f.jpg", "g.jpg"];
@@ -60,6 +70,7 @@ class SignUpPage extends StatelessWidget {
                                   color: Colors.grey.withOpacity(0.3))
                             ]),
                         child: TextField(
+                          controller: _emailController,
                           decoration: InputDecoration(
                               hintText: "Email",
                               prefixIcon: Icon(Icons.email,
@@ -90,6 +101,8 @@ class SignUpPage extends StatelessWidget {
                                   color: Colors.grey.withOpacity(0.3))
                             ]),
                         child: TextField(
+                          controller: _passwordController,
+                          obscureText: true,
                           decoration: InputDecoration(
                               hintText: "Password",
                               prefixIcon: Icon(Icons.password,
@@ -124,23 +137,39 @@ class SignUpPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Container(
-              width: w * 0.5,
-              height: h * 0.08,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  image: DecorationImage(
-                      image: AssetImage("img/26.jpg"), fit: BoxFit.cover)),
-              child: Center(
-                child: Text(
-                  "Sign up",
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
+            GestureDetector(
+              onTap: () async {
+                User? user = await FireAuth.registerUsingEmailPassword(
+                    firstName: "Kasasira",
+                    lastName: "Charles",
+                    email: _emailController.text,
+                    password: _passwordController.text);
+
+                print(user);
+              },
+              child: Container(
+                width: w * 0.5,
+                height: h * 0.08,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    image: DecorationImage(
+                        image: AssetImage("img/26.jpg"), fit: BoxFit.cover)),
+                child: Center(
+                  child: Text(
+                    "Sign up",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
             ),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "/markets");
+                },
+                child: Text("NEXT")),
             SizedBox(
               height: 20,
             ),

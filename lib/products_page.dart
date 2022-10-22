@@ -19,7 +19,7 @@ class _ProductspageState extends State<Productspage> {
         toolbarHeight: 120.10, //set your height
         flexibleSpace: SafeArea(
           child: Container(
-            color: Colors.red, // set your color
+            color: Colors.lightGreenAccent, // set your color
             child: Column(
               children: [
                 Row(
@@ -42,13 +42,13 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/16.jpg",
+                  "img/71.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/17.jpg",
+                  "img/72.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
@@ -57,14 +57,16 @@ class _ProductspageState extends State<Productspage> {
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('MANGOES'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     TextButton(
                       child: const Text('BUY NOW'),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/order');
+                      },
                     ),
                     const SizedBox(width: 8),
                     const SizedBox(width: 8),
@@ -80,13 +82,13 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/30.jpg",
+                  "img/69.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/31.jpg",
+                  "img/70.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
@@ -95,14 +97,16 @@ class _ProductspageState extends State<Productspage> {
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('PAWPAWS'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     TextButton(
                       child: const Text('BUY NOW'),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/pawpaw');
+                      },
                     ),
                     const SizedBox(width: 8),
                     const SizedBox(width: 8),
@@ -118,29 +122,31 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/32.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/85.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/32.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/86.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('BANANAS'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     TextButton(
                       child: const Text('BUY NOW'),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/bannana');
+                      },
                     ),
                     const SizedBox(width: 8),
                     const SizedBox(width: 8),
@@ -156,13 +162,13 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/35.jpg",
+                  "img/60.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/34.jpg",
+                  "img/61.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
@@ -171,14 +177,16 @@ class _ProductspageState extends State<Productspage> {
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('PEAS'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: <Widget>[
                     TextButton(
                       child: const Text('BUY NOW'),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/peas');
+                      },
                     ),
                     const SizedBox(width: 8),
                     const SizedBox(width: 8),
@@ -194,7 +202,7 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/18.jpg",
+                  "img/80.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
@@ -209,7 +217,7 @@ class _ProductspageState extends State<Productspage> {
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('WATERMELON'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -233,21 +241,21 @@ class _ProductspageState extends State<Productspage> {
               children: <Widget>[
                 Image.asset(
                   "img/7.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
                   "img/8.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('ORANGES'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -270,13 +278,13 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/11.jpg",
+                  "img/64.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/12.jpg",
+                  "img/64.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
@@ -285,7 +293,7 @@ class _ProductspageState extends State<Productspage> {
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('TOMATOES'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -308,13 +316,13 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/40.jpg",
+                  "img/76.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/41.jpg",
+                  "img/77.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
@@ -323,7 +331,7 @@ class _ProductspageState extends State<Productspage> {
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('APPLES'),
-                  subtitle: Text('Location: Nakasero Road'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -346,13 +354,13 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/7.jpg",
+                  "img/78.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/8.jpg",
+                  "img/79.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
@@ -361,7 +369,7 @@ class _ProductspageState extends State<Productspage> {
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('LEMONS'),
-                  subtitle: Text('Location: Kalerwe'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -390,7 +398,7 @@ class _ProductspageState extends State<Productspage> {
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/32.jpg",
+                  "img/75.jpg",
                   width: 300.0,
                   height: 200.0,
                   fit: BoxFit.cover,
@@ -399,7 +407,7 @@ class _ProductspageState extends State<Productspage> {
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('CARROTS'),
-                  subtitle: Text('Location: Downtown Kampala'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -422,22 +430,22 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/32.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/58.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/32.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/59.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('MAIZE'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -460,22 +468,22 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/32.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/73.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/32.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/74.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('GREEN VEGETABLES'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -499,21 +507,21 @@ class _ProductspageState extends State<Productspage> {
               children: <Widget>[
                 Image.asset(
                   "img/6.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
                   "img/5.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('CARBAGE'),
-                  subtitle: Text('Location: Nakawa'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -536,21 +544,22 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/33.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/62.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/32.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/62.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
+                  iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('ONIONS'),
-                  subtitle: Text('Location: Nsambya Roundabout'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -567,28 +576,65 @@ class _ProductspageState extends State<Productspage> {
             ),
           ),
 
-          //GREENPAPER
+          //BERRIES
+          Card(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Image.asset(
+                  "img/81.jpg",
+                  width: 300.0,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  "img/82.jpg",
+                  width: 300.0,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                ),
+                const ListTile(
+                  iconColor: Colors.green,
+                  leading: Icon(Icons.store),
+                  title: Text('BERRIES'),
+                  subtitle: Text('price: affordable'),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    TextButton(
+                      child: const Text('BUY NOW'),
+                      onPressed: () {/* ... */},
+                    ),
+                    const SizedBox(width: 8),
+                    const SizedBox(width: 8),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          //GREENPEPPER
           Card(
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
                   "img/9.jpg",
-                  width: 400.0,
-                  height: 30.0,
+                  width: 300.0,
+                  height: 20.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
                   "img/10.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
                   iconColor: Colors.blue,
                   leading: Icon(Icons.store),
-                  title: Text('GREENPAPER'),
-                  subtitle: Text('Location: Nakawa'),
+                  title: Text('GREENPEPPER'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
@@ -611,21 +657,59 @@ class _ProductspageState extends State<Productspage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Image.asset(
-                  "img/31.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/67.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 Image.asset(
-                  "img/23.jpg",
-                  width: 400.0,
-                  height: 300.0,
+                  "img/68.jpg",
+                  width: 300.0,
+                  height: 200.0,
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
+                  iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('MATOKE'),
-                  subtitle: Text('Location: William Street'),
+                  subtitle: Text('price: affordable'),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    TextButton(
+                      child: const Text('BUY NOW'),
+                      onPressed: () {/* ... */},
+                    ),
+                    const SizedBox(width: 8),
+                    const SizedBox(width: 8),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          //AUBERGINE
+          Card(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Image.asset(
+                  "img/83.jpg",
+                  width: 300.0,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  "img/84.jpg",
+                  width: 300.0,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                ),
+                const ListTile(
+                  iconColor: Colors.blue,
+                  leading: Icon(Icons.store),
+                  title: Text('AUBERGINE'),
+                  subtitle: Text('price: affordable'),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,

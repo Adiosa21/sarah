@@ -27,10 +27,12 @@ class _MarketsPageState extends State<MarketsPage> {
                 Row(
                   children: [Icon(Icons.home)],
                 ),
-                Text("FRESH FOOD ONLINE MARKET"), // set an icon or image
+                Text("FRESH FOOD ONLINE MARKETS"), // set an icon or image
                 IconButton(
                     icon: Icon(Icons.search),
-                    onPressed: () {}) // set your search bar setting
+                    onPressed: () {
+                      setState(() {});
+                    }) // set your search bar setting
               ],
             ),
           ),
@@ -60,7 +62,9 @@ class _MarketsPageState extends State<MarketsPage> {
                   children: <Widget>[
                     TextButton(
                       child: const Text('BUY ITEMS'),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/products');
+                      },
                     ),
                     const SizedBox(width: 8),
                     const SizedBox(width: 8),
@@ -92,7 +96,9 @@ class _MarketsPageState extends State<MarketsPage> {
                   children: <Widget>[
                     TextButton(
                       child: const Text('BUY ITEMS'),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/products');
+                      },
                     ),
                     const SizedBox(width: 8),
                     const SizedBox(width: 8),
@@ -156,7 +162,9 @@ class _MarketsPageState extends State<MarketsPage> {
                   children: <Widget>[
                     TextButton(
                       child: const Text('BUY ITEMS'),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/products');
+                      },
                     ),
                     const SizedBox(width: 8),
                     const SizedBox(width: 8),
@@ -178,6 +186,7 @@ class _MarketsPageState extends State<MarketsPage> {
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
+                  iconColor: Colors.blue,
                   leading: Icon(Icons.store),
                   title: Text('USAFI MARKET'),
                   subtitle: Text('Location: Nsambya Roundabout'),
@@ -187,7 +196,9 @@ class _MarketsPageState extends State<MarketsPage> {
                   children: <Widget>[
                     TextButton(
                       child: const Text('BUY ITEMS'),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/products');
+                      },
                     ),
                     const SizedBox(width: 8),
                     const SizedBox(width: 8),
@@ -209,8 +220,9 @@ class _MarketsPageState extends State<MarketsPage> {
                   fit: BoxFit.cover,
                 ),
                 const ListTile(
+                  iconColor: Colors.blue,
                   leading: Icon(Icons.store),
-                  title: Text('NAKAWA MARKET'),
+                  title: Text('NAKIVUBO MARKET'),
                   subtitle: Text('Location: William Street'),
                 ),
                 Row(
@@ -218,12 +230,19 @@ class _MarketsPageState extends State<MarketsPage> {
                   children: <Widget>[
                     TextButton(
                       child: const Text('BUY ITEMS'),
-                      onPressed: () {/* ... */},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/products');
+                      },
                     ),
                     const SizedBox(width: 8),
                     const SizedBox(width: 8),
                   ],
                 ),
+                TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, "/products");
+                    },
+                    child: Text("NEXT")),
               ],
             ),
           ),

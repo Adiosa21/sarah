@@ -6,8 +6,15 @@ import 'signup_page.dart';
 import 'package:get/get.dart';
 import 'markets_page.dart';
 import 'products_page.dart';
+import 'order_page_mango.dart';
+import 'order_page_pawpaw.dart';
+import 'order_page_bannana.dart';
+import 'order_page_peas.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
+  // await Firebase.initializeApp();
+
   runApp(const MyApp());
 }
 
@@ -18,6 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -25,7 +33,13 @@ class MyApp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => const LoginPage(),
-        "/products": ((context) => const Productspage())
+        "/signup": ((context) => const SignUpPage()),
+        "/markets": (context) => const MarketsPage(),
+        "/products": (context) => const Productspage(),
+        "/order": (context) => const Orderpagemango(),
+        "/pawpaw": (context) => const Orderpagepawpaw(),
+        "/bannana": (context) => const Orderpagebannana(),
+        "/peas": (context) => const Orderpagepeas(),
       },
     );
   }

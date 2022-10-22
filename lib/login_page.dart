@@ -93,6 +93,7 @@ class _LoginPageState extends State<LoginPage> {
                                   color: Colors.grey.withOpacity(0.3))
                             ]),
                         child: TextField(
+                          obscureText: true,
                           decoration: InputDecoration(
                               hintText: "Password",
                               prefixIcon: Icon(Icons.password,
@@ -128,19 +129,24 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(
               height: 20,
             ),
-            Container(
-              width: w * 0.5,
-              height: h * 0.08,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  image: DecorationImage(
-                      image: AssetImage("img/26.jpg"), fit: BoxFit.cover)),
-              child: Center(
-                child: Text(
-                  "Sign in",
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
+            InkWell(
+              onTap: () {
+                Navigator.pushNamed(context, "/markets");
+              },
+              child: Container(
+                width: w * 0.5,
+                height: h * 0.08,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30),
+                    image: DecorationImage(
+                        image: AssetImage("img/26.jpg"), fit: BoxFit.cover)),
+                child: Center(
+                  child: Text(
+                    "Sign in",
+                    style: TextStyle(
+                      fontSize: 25,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
@@ -148,24 +154,46 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: w * 0.08),
             TextButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, "/products");
+                  Navigator.pushNamed(context, "/signup");
                 },
-                child: Text("Go to next")),
-            RichText(
-              text: TextSpan(
-                  text: "Don\'t have an account?",
-                  style: TextStyle(color: Colors.grey[500], fontSize: 20),
-                  children: [
-                    TextSpan(
-                        text: " Create",
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () => Get.to(() => SignUpPage()))
-                  ]),
+                child: Text("NEXT")),
+            // RichText(
+            //   text: TextSpan(
+            //       text: "Don\'t have an account?",
+            //       style: TextStyle(color: Colors.grey[500], fontSize: 20),
+            //       children: [
+            //         // TextButton(
+            //         //     onPressed: () {
+            //         //       Navigator.pushNamed(context, '/signup');
+            //         //     },
+            //         //     child: Text())
+            //         TextSpan(
+            //             text: " Create",
+            //             style: TextStyle(
+            //               color: Colors.black,
+            //               fontSize: 20,
+            //               fontWeight: FontWeight.bold,
+            //             ),
+            //             recognizer: TapGestureRecognizer()
+            //               ..onTap = () => Get.to(() => const SignUpPage()
+            //               )
+            //               )
+            //       ]),
+            // ),
+
+            Row(
+              children: [
+                const Text("Don't have an account?"),
+                TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, "/signup");
+                  },
+                  child: const Text(
+                    'SingUp',
+                    style: TextStyle(color: Colors.red),
+                  ),
+                )
+              ],
             ),
           ],
         ));
